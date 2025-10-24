@@ -1,0 +1,16 @@
+{% if product_images %}
+  <div class="product-grid">
+    {% for image in product_images %}
+      <div class="product_item">
+        {% if image.link %}
+          <a href="{{ image.link | url }}">
+        {% else %}
+          <a href="/posts/first/">
+        {% endif %}
+            <img src="{{ image.src | url }}" alt="Product image" class="{{ image.class }}">
+          </a>
+      </div>
+    {% endfor %}
+  </div>
+{% endif %}
+

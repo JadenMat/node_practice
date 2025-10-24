@@ -1,16 +1,9 @@
 <nav>
   <ul>
-    <li>
-      <a href="{{ pathPrefix }}index.html">Home</a>
-    </li>
-    <li>
-      <a href="{{ pathPrefix }}about/">Manifesto</a>
-    </li>
-    <li>
-      <a href="{{ pathPrefix }}products/">Products</a>
-    </li>
-    <li>
-      <a href="{{ pathPrefix }}contact/">Contact</a>
-    </li>
+    <li><a href="{{ '/' | url }}">Home</a></li>
+    <li><a href="{{ '/about/' | url }}">About</a></li>
+    <li><a href="{{ '/product/' | url }}">Products</a></li>
+    <li><a href="{{ '/posts/' | url }}">Posts</a></li>
+    <li><a href="{{ '/contact/' | url }}">Contact</a></li>
   </ul>
 </nav>

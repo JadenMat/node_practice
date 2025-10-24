@@ -2,7 +2,7 @@
   <div class="Background">
     {% if backgroundImages %}
       {% for bg in backgroundImages %}
-        <img src="{{ pathPrefix }}{{ bg.src }}" class="{{ bg.class }}">
+        <img src="{{ bg.src | prefixedUrl }}" class="{{ bg.class }}">
       {% endfor %}
     {% endif %}
   </div>
@@ -10,16 +10,23 @@
   <div class="Environment">
     {% if environmentImages %}
       {% for env in environmentImages %}
-        <img src="{{ pathPrefix }}{{ env.src }}" class="{{ env.class }}">
+        <img src="{{ env.src | prefixedUrl }}" class="{{ env.class }}">
       {% endfor %}
     {% endif %}
   </div>
 
   <div class="Figure">
     {% if figureImages %}
-      {% for fig in figureImages %}
-        <img src="{{ pathPrefix }}{{ fig.src }}" class="{{ fig.class }}">
+    {% for fig in figureImages %}
+       <div class="{{ fig.name }}">
+        {% for img in fig.images %}
+          <img src="{{ img.src | prefixedUrl }}" class="{{ img.class }}">
+         {% endfor %}
+       </div>
       {% endfor %}
+    {% else %}
+    <p>hi</p>
+
     {% endif %}
   </div>
 </div>

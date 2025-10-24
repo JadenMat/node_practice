@@ -23,7 +23,7 @@ backgroundImages:
 environmentImages:
   - { src: "assets/Drawing Images/2/Overhead-Lamp.png", class: "lamp" }
 
-figureGroups:
+figureImages:
   - name: "right-arm-swing"
     images:
       - { src: "assets/Drawing Images/2/Upper Arm.png", class: "upper-arm" }

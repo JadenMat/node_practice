@@ -1,7 +1,10 @@
 ---
-title: First Post
-tags: post
 layout: posts.njk
----
+title: Post1
+stylesheet: post.css
+infoText: "This is the first project in development for my studio. A light device that outputs various colors based on the audio heard."
+permalink: "/posts/first/"
 
-This is the first post content.
+postImage:
+  - {src: "/assets/Sketches_of_Products1/Web_Image_1.jpg", class: "product_1"}
+---

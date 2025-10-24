@@ -1,11 +1,34 @@
-<!--- pulls in content from our base.njk layout ---> 
-{% extends "layout.njk" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ title }}</title>
 
-<!-- block and endblock tags can be used when we want to inject custom code into our template -->
-{% block content %}
-  <article>
-    <h2>{{ title }}</h2>
-    <p><em>{{ date }}</em></p>
-    {{ content | safe }}
-  </article>
-{% endblock %}
+
+    <link rel="stylesheet" href="{{ '/styles/posts.css' | prefixedUrl }}">
+    
+    {% if preloadImages %}
+      {% for image in preloadImages %}
+        <link rel="preload" href="{{ image | prefixedUrl }}" as="image">
+      {% endfor %}
+    {% endif %}
+
+</head>
+
+<body>
+  <div class="grid-container">
+    <header class="header">{% include "nav.njk" %}</header>
+    <main class="content">
+      {% if postImage %}
+      <img src="{{ postImage | url }}" alt="{{ title }} image">
+      {% endif %}
+      {{ content | safe }}
+    </main>
+    <section class="info">
+      <p>{{ infoText }}</p>
+    </section>
+    <footer class="footer">{% include "footer.njk" %}</footer>
+  </div>
+</body>
+</html>

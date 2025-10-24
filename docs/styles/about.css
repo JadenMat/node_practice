@@ -1,0 +1,265 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav ul{
+    width: 100%;
+    height: 60px;
+    top: 0;
+    background-color: black;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12px;
+    z-index: 1000;
+    list-style: none;
+    padding: 2rem;
+}
+
+nav ul li:first-child{
+    margin-right: auto;
+}
+
+nav ul li:not(:first-child){
+    margin-left: 1rem;
+}
+
+nav a {
+    color:aliceblue;
+    text-decoration: none;
+}
+
+nav a:hover{
+    color: lightgray;
+}
+
+.grid-container{
+    display: grid;
+    height: 100vh;
+    width: 100vw;
+    grid-template-areas: 
+    "content content content"
+    "info info info"
+    "footer footer footer"  ;
+}
+
+.grid-item {
+    border: 1px solid black;
+}
+
+.content {
+    margin-top: 60px;
+    position: relative;
+    width: 100vw;
+    height: auto;
+    grid-area: content;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: black;
+    
+}
+
+.animation {
+    position: relative;
+    width: 80vw;
+    aspect-ratio: 16/9;
+    max-width: 1200px;
+    overflow: hidden;
+    background-color: white;
+}
+
+.shadow-lights1 {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    position: absolute;
+    z-index: 0;
+}
+
+.film-border1 {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  position: absolute;
+  z-index: 1;
+}
+
+.Environment1 {
+    position: absolute;
+    width: 40%;
+    top: 20%;
+    left: 30%; 
+    margin:0 auto;
+    aspect-ratio: 3/4;
+    z-index: 2;
+}
+
+.lamp-1 {
+    position: absolute;
+    width: 57.5%;
+    bottom: 83%;
+    left: 19.5%;
+}
+
+.Figure1 {
+    position: absolute;
+    width: 40%;
+    top: 20%;
+    left: 30%;
+    margin:0 auto;
+    aspect-ratio: 3/4;
+    z-index: 2;
+}
+
+.head1 {
+    position: absolute;
+    width: 20%;
+    top: 38%;
+    left: 30%;
+    transform: rotate(15deg);
+    /* animation: head-lean-back 2s ease-in-out infinite; */
+    transform-origin: center;
+}
+
+@keyframes head-lean-back {
+    0%   {transform: rotate(0deg);}
+    50%  {transform: rotate(-15deg);}
+    100% {transform: rotate(0deg);}
+}
+
+.torso1 {
+    position: absolute;
+    width: 41%;
+    top: 45%;
+    left: 9%;
+    transform: rotate(14deg);
+    /* animation: torso-lean-back 2s ease-in-out infinite; */
+    transform-origin: center;
+}
+
+@keyframes torso-lean-back {
+    0%   {transform: rotate(2deg); right: 635px;}
+    50%  {transform: rotate(-10deg); right: 615px;}
+    100% {transform: rotate(2deg); right: 635px;}
+}
+
+.upper-right-arm1 {
+    position: absolute;
+    width: 22%;
+    top: 52%;
+    left: 28%;
+    transform: rotate(25deg);
+    /* animation: upper-right-arm-swing 2s ease-in-out infinite; */
+    transform-origin: center;
+}
+
+.lower-right-arm1 {
+    position: absolute;
+    width: 20%;
+    top: 62%;
+    left: 38%;
+    transform: rotate(55deg);
+    /* animation: upper-right-arm-swing 2s ease-in-out infinite; */
+    transform-origin: center;
+}
+
+.right-hand1 {
+    position: absolute;
+    width: 10%;
+    top: 70%;
+    left: 53%;
+    transform: rotate(80deg);
+    /* animation: upper-right-arm-swing 2s ease-in-out infinite; */
+    transform-origin: center;
+}
+
+.stick1 {
+    position: absolute;
+    width: 40%;
+    top: 64%;
+    left: 58%;
+    transform: rotate(65deg);
+    /* animation: upper-right-arm-swing 2s ease-in-out infinite; */
+    transform-origin: center;
+}
+
+.upper-left-arm1 {
+    position: absolute;
+    width: 18%;
+    top: 52%;
+    left: 31%;
+    transform: rotate(10deg);
+    /* animation: upper-right-arm-swing 2s ease-in-out infinite; */
+    transform-origin: center;
+}
+
+.lower-left-arm1 {
+    position: absolute;
+    width: 18%;
+    top: 54%;
+    left: 36%;
+    transform: rotate(-50deg);
+    /* animation: upper-right-arm-swing 2s ease-in-out infinite; */
+    transform-origin: center;
+}
+
+.left-hand1 {
+    position: absolute;
+    width: 12%;
+    top: 48%;
+    left: 40%;
+    transform: rotate(65deg) scaleX(-1);
+    /* animation: upper-right-arm-swing 2s ease-in-out infinite; */
+    transform-origin: center;
+}
+
+.upper-leg1 {
+    position: absolute;
+    width: 37%;
+    top: 56%;
+    left: 16%;
+    transform: rotate(10deg);
+    /* animation: upper-right-arm-swing 2s ease-in-out infinite; */
+    transform-origin: center;
+}
+
+.lower-leg1 {
+    position: absolute;
+    width: 42%;
+    top: 56%;
+    left: 23%;
+    transform: rotate(5deg);
+    /* animation: upper-right-arm-swing 2s ease-in-out infinite; */
+    transform-origin: center;
+}
+
+.feet1 {
+    position: absolute;
+    width: 20%;
+    top: 74%;
+    left: 35.5%;
+    /* animation: upper-right-arm-swing 2s ease-in-out infinite; */
+    transform-origin: center;
+}
+
+.info {
+    width: 100vw;
+    height: 200vh;
+    background-color: black;
+    grid-area: info;
+}
+
+.footer {
+    width: 100vw;
+    height: 60px;
+    background-color: brown;
+    grid-area: footer;
+}

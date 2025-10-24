@@ -3,20 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ title or "Untitled Page" }}</title>
+  <title>{{ title }}</title>
 
-  {% if stylesheet %}
-    <link rel="stylesheet" href="{{ pathPrefix }}styles/{{ stylesheet }}">
-  {% else %}
-    <link rel="stylesheet" href="{{ pathPrefix }}styles/index.css">
-  {% endif %}
 
-  {# Optional preloaded images #}
-  {% if preloadImages %}
-    {% for img in preloadImages %}
-      <link rel="preload" href="{{ pathPrefix }}{{ img }}" as="image">
-    {% endfor %}
-  {% endif %}
+    <link rel="stylesheet" href="{{ '/styles/index.css' | prefixedUrl }}">
+    
+    {% if preloadImages %}
+      {% for image in preloadImages %}
+        <link rel="preload" href="{{ image | prefixedUrl }}" as="image">
+      {% endfor %}
+    {% endif %}
+
 </head>
 
 <body>
@@ -26,7 +23,10 @@
       {% include "animation.njk" %}
       {{ content | safe }}
     </main>
-    <section class="info"><p>{{ infoText }}</p></section>
+    <section class="info">
+      <p>{{ infoText }}</p>
+      {% include "product-grid.njk" %}
+    </section>
     <footer class="footer">{% include "footer.njk" %}</footer>
   </div>
 </body>
