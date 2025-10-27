@@ -3,11 +3,11 @@
     {% for image in product_images %}
       <div class="product_item">
         {% if image.link %}
-          <a href="{{ image.link | url }}">
+          <a href="{{ image.link | prefixedUrl }}">
         {% else %}
-          <a href="/posts/first/">
+          <a href="{{ '/posts/first/' | prefixedUrl }}">
         {% endif %}
-            <img src="{{ image.src | url }}" alt="Product image" class="{{ image.class }}">
+            <img src="{{ image.src | prefixedUrl }}" alt="Product image" class="{{ image.class }}">
           </a>
       </div>
     {% endfor %}

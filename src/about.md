@@ -5,43 +5,43 @@ stylesheet: about.css
 infoText: "WHAT WE'VE BEEN UP TO:"
 
 preloadImages:
-  - "assets/Drawing Images/2/Head.png"
-  - "assets/Drawing Images/2/Torso.png"
-  - "assets/Drawing Images/2/Upper Arm.png"
-  - "assets/Drawing Images/2/Lower Arm.png"
-  - "assets/Drawing Images/2/Right Hand.png"
-  - "assets/Drawing Images/2/Hammer.png"
-  - "assets/Drawing Images/2/Left hand.png"
-  - "assets/Drawing Images/2/Upper Leg.png"
-  - "assets/Drawing Images/2/Lower Leg.png"
-  - "assets/Drawing Images/2/Feet.png"
+  - "{{ 'assets/Drawing Images/2/Head.png' | prefixedUrl }}"
+  - "{{ 'assets/Drawing Images/2/Torso.png' | prefixedUrl }}"
+  - "{{ 'assets/Drawing Images/2/Upper Arm.png' | prefixedUrl }}"
+  - "{{ 'assets/Drawing Images/2/Lower Arm.png' | prefixedUrl }}"
+  - "{{ 'assets/Drawing Images/2/Right Hand.png' | prefixedUrl }}"
+  - "{{ 'assets/Drawing Images/2/Hammer.png' | prefixedUrl }}"
+  - "{{ 'assets/Drawing Images/2/Left hand.png' | prefixedUrl }}"
+  - "{{ 'assets/Drawing Images/2/Upper Leg.png' | prefixedUrl }}"
+  - "{{ 'assets/Drawing Images/2/Lower Leg.png' | prefixedUrl }}"
+  - "{{ 'assets/Drawing Images/2/Feet.png' | prefixedUrl }}"
 
 backgroundImages:
-  - { src: "assets/Drawing Images/Film insert/Film Border Blurry Edges1.png", class: "film-border" }
-  - { src: "assets/Drawing Images/Film insert/background-lights.png", class: "shadow-lights" }
+  - { src: "{{ 'assets/Drawing Images/Film insert/Film Border Blurry Edges1.png' | prefixedUrl }}", class: "film-border" }
+  - { src: "{{ 'assets/Drawing Images/Film insert/background-lights.png' | prefixedUrl }}", class: "shadow-lights" }
 
 environmentImages:
-  - { src: "assets/Drawing Images/2/Overhead-Lamp.png", class: "lamp" }
+  - { src: "{{ 'assets/Drawing Images/2/Overhead-Lamp.png' | prefixedUrl }}", class: "lamp" }
 
-figureGroups:
+figureImages:
   - name: "right-arm-swing"
     images:
-      - { src: "assets/Drawing Images/2/Upper Arm.png", class: "upper-arm" }
-      - { src: "assets/Drawing Images/2/Lower Arm.png", class: "lower-arm" }
-      - { src: "assets/Drawing Images/2/Right Hand.png", class: "right-hand" }
-      - { src: "assets/Drawing Images/2/Hammer.png", class: "hammer" }
+      - { src: "{{ 'assets/Drawing Images/2/Upper Arm.png' | prefixedUrl }}", class: "upper-arm" }
+      - { src: "{{ 'assets/Drawing Images/2/Lower Arm.png' | prefixedUrl }}", class: "lower-arm" }
+      - { src: "{{ 'assets/Drawing Images/2/Right Hand.png' | prefixedUrl }}", class: "right-hand" }
+      - { src: "{{ 'assets/Drawing Images/2/Hammer.png' | prefixedUrl }}", class: "hammer" }
 
   - name: "lower-left-arm-slide"
     images:
-      - { src: "assets/Drawing Images/2/Lower Arm.png", class: "lower-left-arm" }
-      - { src: "assets/Drawing Images/2/Left hand.png", class: "left-hand" }
+      - { src: "{{ 'assets/Drawing Images/2/Lower Arm.png' | prefixedUrl }}", class: "lower-left-arm" }
+      - { src: "{{ 'assets/Drawing Images/2/Left hand.png' | prefixedUrl }}", class: "left-hand" }
 
   - name: "static-figure"
     images:
-      - { src: "assets/Drawing Images/2/Head.png", class: "head" }
-      - { src: "assets/Drawing Images/2/Torso.png", class: "torso" }
-      - { src: "assets/Drawing Images/2/Upper Arm.png", class: "upper-left-arm" }
-      - { src: "assets/Drawing Images/2/Upper Leg.png", class: "upper-leg" }
-      - { src: "assets/Drawing Images/2/Lower Leg.png", class: "lower-leg" }
-      - { src: "assets/Drawing Images/2/Feet.png", class: "feet" }
+      - { src: "{{ 'assets/Drawing Images/2/Head.png' | prefixedUrl }}", class: "head" }
+      - { src: "{{ 'assets/Drawing Images/2/Torso.png' | prefixedUrl }}", class: "torso" }
+      - { src: "{{ 'assets/Drawing Images/2/Upper Arm.png' | prefixedUrl }}", class: "upper-left-arm" }
+      - { src: "{{ 'assets/Drawing Images/2/Upper Leg.png' | prefixedUrl }}", class: "upper-leg" }
+      - { src: "{{ 'assets/Drawing Images/2/Lower Leg.png' | prefixedUrl }}", class: "lower-leg" }
+      - { src: "{{ 'assets/Drawing Images/2/Feet.png' | prefixedUrl }}", class: "feet" }
 ---

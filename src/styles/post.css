@@ -69,6 +69,23 @@ nav a:hover{
     object-fit: contain;
 }
 
+.image-header {
+    display: flex;                /* allows centering content */
+    justify-content: center;      /* centers horizontally */
+    align-items: center;          /* centers vertically if given height */
+    width: 100%;
+    margin: 2rem 0;               /* space above/below */
+  }
+  
+  .image-header img {
+    max-width: 600px;             /* lock maximum width */
+    width: 100%;                  /* shrink responsively */
+    height: auto;                 /* preserve aspect ratio */
+    object-fit: contain;          /* prevent stretching */
+    border-radius: 8px;           /* optional aesthetic touch */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* optional depth */
+  }
+
 .info {
     width: 100vw;
     height: 200vh;

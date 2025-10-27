@@ -6,7 +6,7 @@
   <title>{{ title }}</title>
 
 
-    <link rel="stylesheet" href="{{ '/styles/posts.css' | prefixedUrl }}">
+    <link rel="stylesheet" href="{{ '/styles/post.css' | prefixedUrl }}">
     
     {% if preloadImages %}
       {% for image in preloadImages %}
@@ -20,10 +20,14 @@
   <div class="grid-container">
     <header class="header">{% include "nav.njk" %}</header>
     <main class="content">
-      {% if postImage %}
-      <img src="{{ postImage | url }}" alt="{{ title }} image">
-      {% endif %}
+      <div class="image-header">
+        {% if postImage %}
+        {% for image in postImage %}
+          <img src="{{ image.src | prefixedUrl }}" alt="{{ title }} image" class="{{ image.class }}">
+        {% endfor %}
+        {% endif %}
       {{ content | safe }}
+      </div>
     </main>
     <section class="info">
       <p>{{ infoText }}</p>

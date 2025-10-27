@@ -4,6 +4,7 @@ module.exports = function(eleventyConfig) {
 
   eleventyConfig.addPassthroughCopy("src/assets");
   eleventyConfig.addPassthroughCopy("src/styles");
+  
 
   const isProduction = process.env.ELEVENTY_ENV === "production";
 
